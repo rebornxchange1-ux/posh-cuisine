@@ -74,8 +74,11 @@ img {
 }
 
 .logo-link img {
-  height: 56px;
-  width: auto;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
 }
 
 .nav-links {
@@ -414,7 +417,11 @@ section {
 }
 
 .footer-brand img {
-  height: 60px;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
   margin-bottom: 20px;
 }
 
