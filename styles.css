@@ -271,6 +271,13 @@ section {
   align-items: center;
 }
 
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
 .intro-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -504,8 +511,17 @@ section {
    =========================== */
 
 @media (max-width: 900px) {
-  .intro {
+  .intro-grid {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .intro-images {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-images img {
+    height: 260px;
   }
 
   .intro-images img:first-child {
