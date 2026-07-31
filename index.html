@@ -175,15 +175,6 @@
     padding: 0 24px;
   }
 
-  .hero-eyebrow {
-    font-size: 0.78rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-    display: block;
-    margin-bottom: 22px;
-  }
-
   .hero h1 {
     font-size: clamp(2.6rem, 6.5vw, 4.6rem);
     line-height: 1.06;
@@ -192,56 +183,6 @@
 
   .hero h1 em {
     font-style: italic;
-    color: var(--gold);
-  }
-
-  .hero p {
-    margin-top: 24px;
-    font-size: 1.08rem;
-    color: var(--text-dim);
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-  }
-
-  .hero-actions {
-    margin-top: 40px;
-    display: flex;
-    gap: 18px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 15px 30px;
-    font-size: 0.92rem;
-    letter-spacing: 0.02em;
-    border-radius: 2px;
-    transition: all 0.28s ease;
-    border: 1px solid transparent;
-  }
-
-  .btn-primary {
-    background: var(--gold);
-    color: #0D0D0D;
-    font-weight: 500;
-  }
-
-  .btn-primary:hover {
-    background: var(--amber-deep);
-  }
-
-  .btn-outline {
-    border-color: rgba(245, 245, 240, 0.3);
-    color: var(--text);
-  }
-
-  .btn-outline:hover {
-    border-color: var(--gold);
     color: var(--gold);
   }
 
@@ -342,13 +283,45 @@
     display: block;
   }
 
+  /* ---------- Featured dishes ---------- */
+
+  .dish-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .dish-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 26px;
+    background: var(--surface);
+    border: 1px solid rgba(232, 163, 61, 0.14);
+    border-radius: 3px;
+  }
+
+  .dish-item .mark {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.1rem;
+  }
+
+  .dish-item span.name {
+    font-size: 1rem;
+    color: var(--text);
+  }
+
   /* ---------- Gallery preview ---------- */
 
   .gallery-preview-grid {
-    max-width: 1200px;
+    max-width: 760px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
@@ -386,6 +359,28 @@
   .gallery-cta {
     text-align: center;
     margin-top: 44px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 30px;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    border-radius: 2px;
+    transition: all 0.28s ease;
+    border: 1px solid transparent;
+  }
+
+  .btn-outline {
+    border-color: rgba(245, 245, 240, 0.3);
+    color: var(--text);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
   }
 
   /* ---------- Highlights strip ---------- */
@@ -426,53 +421,38 @@
     line-height: 1.65;
   }
 
-  /* ---------- Visit / CTA band ---------- */
+  /* ---------- Location and hours strip ---------- */
 
-  .visit-band {
+  .location-band {
     max-width: 1100px;
     margin: 0 auto;
     background: linear-gradient(135deg, rgba(232,163,61,0.08), rgba(232,163,61,0.02));
     border: 1px solid rgba(232, 163, 61, 0.22);
     border-radius: 4px;
-    padding: 64px 48px;
+    padding: 56px 48px;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
   }
 
-  .visit-band h2 {
-    font-size: clamp(1.7rem, 3vw, 2.2rem);
-    margin-bottom: 16px;
-  }
-
-  .visit-band p {
-    color: var(--text-dim);
-    line-height: 1.7;
-  }
-
-  .visit-details {
+  .location-item {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 8px;
   }
 
-  .visit-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .visit-item span.label {
+  .location-item span.label {
     font-size: 0.74rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--gold);
   }
 
-  .visit-item span.value {
-    font-size: 0.98rem;
+  .location-item span.value {
+    font-size: 1.02rem;
     color: var(--text);
+    line-height: 1.6;
   }
 
   /* ---------- Footer ---------- */
@@ -486,7 +466,7 @@
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
     gap: 48px;
     padding-bottom: 40px;
   }
@@ -526,21 +506,6 @@
     margin-bottom: 18px;
     font-weight: 400;
   }
-
-  .footer-col ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .footer-col ul a {
-    color: var(--text-dim);
-    font-size: 0.92rem;
-    transition: color 0.25s ease;
-  }
-
-  .footer-col ul a:hover { color: var(--gold); }
 
   .footer-socials {
     display: flex;
@@ -603,19 +568,22 @@
     nav.main-nav.open a { font-size: 1.3rem; }
 
     .intro,
-    .gallery-preview-grid,
-    .highlights,
-    .visit-band {
+    .location-band,
+    .footer-grid {
       grid-template-columns: 1fr;
     }
 
-    .gallery-preview-grid figure:first-child {
-      grid-row: auto;
+    .dish-list {
+      grid-template-columns: 1fr;
+    }
+
+    .highlights {
+      display: none;
     }
 
     section { padding: 0 6% 90px; }
 
-    .visit-band { padding: 44px 28px; }
+    .location-band { padding: 44px 28px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -662,13 +630,7 @@
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">Owerri</span>
     <h1>Posh <em>Cuisine</em><br>&amp; Lounge</h1>
-    <p>A dining room and lounge in the heart of Owerri, serving rice dishes, soups and fresh pastries in a space built for good company.</p>
-    <div class="hero-actions">
-      <a href="menu.html" class="btn btn-primary">View the menu</a>
-      <a href="contact.html" class="btn btn-outline">Find us</a>
-    </div>
   </div>
 </section>
 
@@ -684,29 +646,49 @@
   <div class="intro">
     <div class="intro-copy">
       <h2>A place to sit down properly</h2>
-      <p>Posh Cuisine and Lounge sits on a quiet stretch of road in Owerri, behind glass frontage that opens onto a bright, tiled dining room. Booths line one wall, tables fill the floor, and the counter at the back keeps a steady rotation of bread, meat pies and pastries under warm light.</p>
-      <p>The kitchen leans into rice dishes done properly, soups made the way they are meant to be made, and a cake counter that draws people in on its own. Whether it is a quick pastry on the way past or a full sit down meal with people you like, the room is built to hold both.</p>
+      <p>Posh Cuisine and Lounge is a restaurant and lounge based in Owerri, offering a menu built around rich, well prepared Nigerian dishes and a relaxed dining atmosphere. From native soups to signature rice dishes, every plate is prepared with care for guests looking for good food and good company.</p>
     </div>
     <div class="intro-image">
       <img src="view.png" alt="Interior seating area at Posh Cuisine and Lounge">
     </div>
   </div>
-</div>
+</section>
+
+<section>
+  <div class="section-head">
+    <span class="section-eyebrow">On the menu</span>
+    <h2>Featured dishes</h2>
+  </div>
+  <div class="dish-list">
+    <div class="dish-item">
+      <span class="mark">01</span>
+      <span class="name">Jollof Rice</span>
+    </div>
+    <div class="dish-item">
+      <span class="mark">02</span>
+      <span class="name">Goatmeat Rice</span>
+    </div>
+    <div class="dish-item">
+      <span class="mark">03</span>
+      <span class="name">Egusi Soup</span>
+    </div>
+    <div class="dish-item">
+      <span class="mark">04</span>
+      <span class="name">Ogbono Soup</span>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="section-head">
     <span class="section-eyebrow">Inside the counter</span>
     <h2>What is waiting when you walk in</h2>
-    <p>A glimpse of the space and the pastry counter that greets every table.</p>
+    <p>A glimpse of the pastry counter that greets every table.</p>
   </div>
   <div class="gallery-preview-grid">
     <figure>
       <img src="showcase.png" alt="Pastry and bread display counter at Posh Cuisine and Lounge">
       <figcaption>The pastry counter</figcaption>
-    </figure>
-    <figure>
-      <img src="view.png" alt="Dining room seating at Posh Cuisine and Lounge">
-      <figcaption>The dining room</figcaption>
     </figure>
   </div>
   <div class="gallery-cta">
@@ -739,27 +721,14 @@
 </section>
 
 <section>
-  <div class="visit-band">
-    <div>
-      <h2>Come sit with us</h2>
-      <p>Open daily in Owerri. Walk in, call ahead, or send a message on WhatsApp to ask about the day's menu.</p>
-      <div class="hero-actions" style="justify-content: flex-start; margin-top: 28px;">
-        <a href="https://wa.me/2349131022764" class="btn btn-primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
-      </div>
+  <div class="location-band">
+    <div class="location-item">
+      <span class="label">Location</span>
+      <span class="value">23 Plaza, by Ohi Junction, Orlu Road, Owerri, Imo State</span>
     </div>
-    <div class="visit-details">
-      <div class="visit-item">
-        <span class="label">Location</span>
-        <span class="value">Owerri, Nigeria</span>
-      </div>
-      <div class="visit-item">
-        <span class="label">Phone</span>
-        <span class="value">0913 102 2764</span>
-      </div>
-      <div class="visit-item">
-        <span class="label">Find us on</span>
-        <span class="value">Facebook and Instagram</span>
-      </div>
+    <div class="location-item">
+      <span class="label">Hours</span>
+      <span class="value">Open daily, 9am to 9pm, Monday to Sunday</span>
     </div>
   </div>
 </section>
@@ -771,7 +740,7 @@
         <img src="logo.png" alt="Posh Cuisine and Lounge logo">
         <span>Posh Cuisine &amp; Lounge</span>
       </div>
-      <address>Owerri, Nigeria</address>
+      <address>23 Plaza, by Ohi Junction, Orlu Road, Owerri, Imo State</address>
       <div class="footer-socials">
         <a href="https://www.facebook.com/profile.php?id=61557464377972" aria-label="Facebook" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg>
@@ -785,16 +754,16 @@
       </div>
     </div>
     <div class="footer-col">
-      <h4>Explore</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
       <h4>Reach us</h4>
       <p>0913 102 2764</p>
-      <p>Ow
+      <p>Owerri, Nigeria</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Posh Cuisine &amp; Lounge</span>
+    <span>Owerri, Nigeria</span>
+  </div>
+</footer>
+
+</body>
+</html>
