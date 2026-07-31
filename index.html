@@ -286,33 +286,33 @@
   /* ---------- Featured dishes ---------- */
 
   .dish-list {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
 
   .dish-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 22px 26px;
     background: var(--surface);
     border: 1px solid rgba(232, 163, 61, 0.14);
     border-radius: 3px;
+    overflow: hidden;
   }
 
-  .dish-item .mark {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    color: var(--gold);
-    font-size: 1.1rem;
+  .dish-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
   }
 
   .dish-item span.name {
-    font-size: 1rem;
+    display: block;
+    padding: 16px 14px;
+    font-size: 0.95rem;
     color: var(--text);
+    text-align: center;
   }
 
   /* ---------- Gallery preview ---------- */
@@ -381,78 +381,6 @@
   .btn-outline:hover {
     border-color: var(--gold);
     color: var(--gold);
-  }
-
-  /* ---------- Highlights strip ---------- */
-
-  .highlights {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-
-  .highlight-card {
-    text-align: center;
-    padding: 40px 24px;
-    background: var(--surface);
-    border: 1px solid rgba(232, 163, 61, 0.12);
-    border-radius: 3px;
-  }
-
-  .highlight-card .mark {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 1.6rem;
-    color: var(--gold);
-    margin-bottom: 16px;
-    display: block;
-  }
-
-  .highlight-card h3 {
-    font-size: 1.15rem;
-    margin-bottom: 12px;
-  }
-
-  .highlight-card p {
-    color: var(--text-dim);
-    font-size: 0.95rem;
-    line-height: 1.65;
-  }
-
-  /* ---------- Location and hours strip ---------- */
-
-  .location-band {
-    max-width: 1100px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, rgba(232,163,61,0.08), rgba(232,163,61,0.02));
-    border: 1px solid rgba(232, 163, 61, 0.22);
-    border-radius: 4px;
-    padding: 56px 48px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .location-item {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .location-item span.label {
-    font-size: 0.74rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-
-  .location-item span.value {
-    font-size: 1.02rem;
-    color: var(--text);
-    line-height: 1.6;
   }
 
   /* ---------- Footer ---------- */
@@ -568,22 +496,15 @@
     nav.main-nav.open a { font-size: 1.3rem; }
 
     .intro,
-    .location-band,
     .footer-grid {
       grid-template-columns: 1fr;
     }
 
     .dish-list {
-      grid-template-columns: 1fr;
-    }
-
-    .highlights {
-      display: none;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     section { padding: 0 6% 90px; }
-
-    .location-band { padding: 44px 28px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -661,19 +582,19 @@
   </div>
   <div class="dish-list">
     <div class="dish-item">
-      <span class="mark">01</span>
+      <img src="jollof.png" alt="Jollof Rice">
       <span class="name">Jollof Rice</span>
     </div>
     <div class="dish-item">
-      <span class="mark">02</span>
+      <img src="goatmeat.png" alt="Goatmeat Rice">
       <span class="name">Goatmeat Rice</span>
     </div>
     <div class="dish-item">
-      <span class="mark">03</span>
+      <img src="egusi.png" alt="Egusi Soup">
       <span class="name">Egusi Soup</span>
     </div>
     <div class="dish-item">
-      <span class="mark">04</span>
+      <img src="ogbono.png" alt="Ogbono Soup">
       <span class="name">Ogbono Soup</span>
     </div>
   </div>
@@ -693,43 +614,6 @@
   </div>
   <div class="gallery-cta">
     <a href="gallery.html" class="btn btn-outline">See the full gallery</a>
-  </div>
-</section>
-
-<section>
-  <div class="section-head">
-    <span class="section-eyebrow">Why people stay</span>
-    <h2>Built around rice, soup and cake</h2>
-  </div>
-  <div class="highlights">
-    <div class="highlight-card">
-      <span class="mark">01</span>
-      <h3>Rice done many ways</h3>
-      <p>Protein rice, fish rice, coconut rice, Caribbean rice and more, each prepared to order.</p>
-    </div>
-    <div class="highlight-card">
-      <span class="mark">02</span>
-      <h3>Soups made properly</h3>
-      <p>Egusi, afang, okro, bitter leaf and ogbono soups, cooked the traditional way.</p>
-    </div>
-    <div class="highlight-card">
-      <span class="mark">03</span>
-      <h3>A cake counter worth stopping for</h3>
-      <p>Fruit cake, special cake, cupcakes and big cakes, baked fresh and displayed at the front.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="location-band">
-    <div class="location-item">
-      <span class="label">Location</span>
-      <span class="value">23 Plaza, by Ohi Junction, Orlu Road, Owerri, Imo State</span>
-    </div>
-    <div class="location-item">
-      <span class="label">Hours</span>
-      <span class="value">Open daily, 9am to 9pm, Monday to Sunday</span>
-    </div>
   </div>
 </section>
 
@@ -756,7 +640,7 @@
     <div class="footer-col">
       <h4>Reach us</h4>
       <p>0913 102 2764</p>
-      <p>Owerri, Nigeria</p>
+      <p>Open daily, 9am to 9pm, Monday to Sunday</p>
     </div>
   </div>
   <div class="footer-bottom">
